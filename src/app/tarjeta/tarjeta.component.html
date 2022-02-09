@@ -1,0 +1,10 @@
+<div class="card" *ngIf="name && lastName && bio ; else option" >
+    <p>Nombre: {{name}}</p>
+    <p>Apellido: {{lastName}}</p>
+    <p>Bio: {{bio}}</p>
+</div>
+
+<ng-template class="card opcional" #option >
+    <p>No se puede mostrar debido a que los atributos estan vacios.</p>
+</ng-template>
+
